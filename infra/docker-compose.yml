@@ -23,7 +23,7 @@ services:
     working_dir: /src
     volumes:
       - etl_data:/src
-    command: bash -lc "pip install -r requirements.txt && python runner.py"
+    command: bash -lc "uv sync && uv run main.py"
     environment:
       POSTGRES_HOST: postgres
       POSTGRES_PORT: "5432"
