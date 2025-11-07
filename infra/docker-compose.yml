@@ -1,6 +1,6 @@
 services:
   postgres:
-    image: postgres:latest
+    image: postgres:17
     ports:
       - "5432:5432"
     environment:
@@ -17,33 +17,30 @@ services:
         labels: "service=postgres"
     restart: unless-stopped
 
-  etl:
-    image: python:3.11-slim
-    container_name: extract_load
-    working_dir: /src
-    volumes:
-      - etl_data:/src
-    command: bash -lc "uv sync && uv run main.py"
-    environment:
-      POSTGRES_HOST: postgres
-      POSTGRES_PORT: "5432"
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: postgres
-      MINIO_URL: http://minio:9000
-    depends_on:
-      - postgres
-      - minio
-    logging: 
-      driver: "json-file"
-      options:
-          max-size: "10m"
-          max-file: "3"
-          labels: "service=etl"
-    restart: on-failure
+  # etl:
+  #   image: python:3.11-slim
+  #   container_name: extract_load
+  #   working_dir: /src
+  #   volumes:
+  #     - etl_data:/src
+  #   depends_on:
+  #     - postgres
+  #     - minio
+  #   logging: 
+  #     driver: "json-file"
+  #     options:
+  #         max-size: "10m"
+  #         max-file: "3"
+  #         labels: "service=etl"
+  #   restart: on-failure
 
   minio:
-    image: minio/minio:latest
+    image: quay.io/minio/minio
+    command:
+      - server
+      - --console-address
+      - :9001
+      - /data
     container_name: minio_container
     ports:
       - "9000:9000"
@@ -51,11 +48,8 @@ services:
     environment:
       MINIO_ROOT_USER: minioadmin
       MINIO_ROOT_PASSWORD: minioadmin
-    command: server /data --console-address ":9001"
     volumes:
       - minio_data:/data
-    depends_on:
-      - postgres
     logging: 
       driver: "json-file"
       options:
@@ -64,33 +58,25 @@ services:
         labels: "service=minio"
     restart: unless-stopped
 
-  streamlit:
-    image: python:3.11-slim
-    container_name: streamlit_container
-    working_dir: /app
-    volumes:
-      - streamlit_data:/app
-    command: bash -lc "pip install -r requirements.txt && streamlit run app.py --server.port=8501 --server.address=0.0.0.0"
-    ports:
-      - "8501:8501"
-    environment:
-      MINIO_URL: http://minio:9000
-      POSTGRES_HOST: postgres
-      POSTGRES_PORT: "5432"
-    depends_on:
-      - postgres
-      - minio
-    logging: 
-      driver: "json-file"
-      options:
-        max-size: "10m"
-        max-file: "3"
-        labels: "service=streamlit"
-    restart: unless-stopped
+  # streamlit:
+  #   image: python:3.11-slim
+  #   container_name: streamlit_container
+  #   working_dir: /app
+  #   volumes:
+  #     - streamlit_data:/app
+  #   ports:
+  #     - "8501:8501"
+  #   logging: 
+  #     driver: "json-file"
+  #     options:
+  #       max-size: "10m"
+  #       max-file: "3"
+  #       labels: "service=streamlit"
+  #   restart: unless-stopped
 
 
 volumes:
   postgres_data:
-  etl_data:
+  # etl_data:
   minio_data:
-  streamlit_data:
+  # streamlit_data:
