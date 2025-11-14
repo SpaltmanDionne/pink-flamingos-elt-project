@@ -21,7 +21,7 @@ def hello_world(**kwargs):
 
 class ExtractLoad():
     def __init__(self, read_from_cache=False):
-        self.base_url = "placeholder"
+        self.base_url = "https://www.googleapis.com/books/v1/volumes"
         self.cache_file = "books_test.json"
         self.load_date = datetime.now().strftime("%Y-%m-%d")
         self.bucket_name = "test-flamingo"
@@ -31,7 +31,7 @@ class ExtractLoad():
             "q": "subject:romance",
             "orderBy": "relevance",
             "maxResults": 10,
-            "key": "AIzaSyBmNRXdKyoWBkU9ZrcaNzKjrAWqd0j-las"
+            "key": "placeholder"
         }
 
         conn = BaseHook.get_connection('minio') 
