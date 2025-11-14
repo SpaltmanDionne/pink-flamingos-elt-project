@@ -36,6 +36,7 @@ class ExtractLoad():
         books = []
 
         while start_index < 10:
+            print(f"Initializing extracting for index starting at: {start_index}")
             self.query_params["startIndex"] = start_index
             res = requests.get(self.base_url, params=self.query_params)
 
@@ -50,6 +51,7 @@ class ExtractLoad():
             books.extend(items)
             start_index += len(items)
         
+        print(f"Extract finalized. Total {len(books)} books were collected.")
         return books
     
     def load(self, books: list):
@@ -60,6 +62,7 @@ class ExtractLoad():
         json_bytes = json.dumps(books, ensure_ascii=False, indent=2).encode("utf-8")
         json_file = BytesIO(json_bytes)
 
+        print("Loading json file to Minio.")
         self.client.put_object(
             bucket_name=self.bucket_name,
             object_name=file_name,
@@ -67,6 +70,7 @@ class ExtractLoad():
             length=len(json_bytes),
             content_type="application/json"
         )
+        print("Data loaded.")
 
     def el(self):
         if self.read_from_cache:
