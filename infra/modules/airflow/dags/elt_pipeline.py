@@ -21,7 +21,7 @@ def hello_world(**kwargs):
 
 class ExtractLoad():
     def __init__(self, read_from_cache=False):
-        self.base_url = "https://www.googleapis.com/books/v1/volumes"
+        self.base_url = "placeholder"
         self.cache_file = "books_test.json"
         self.load_date = datetime.now().strftime("%Y-%m-%d")
         self.bucket_name = "test-flamingo"
@@ -31,27 +31,24 @@ class ExtractLoad():
             "q": "subject:romance",
             "orderBy": "relevance",
             "maxResults": 10,
-            "key": "api_key_placeholder"
+            "key": "AIzaSyBmNRXdKyoWBkU9ZrcaNzKjrAWqd0j-las"
         }
 
         conn = BaseHook.get_connection('minio') 
         extras = conn.extra_dejson
-        
-        print(extras)
 
         endpoint = extras.get("endpoint_url", conn.host)
-        access_key = extras.get("aws_acces_key_id", conn.login)
+        access_key = extras.get("aws_access_key_id", conn.login)
         secret_key = extras.get("aws_secret_access_key", conn.password)
         # secure = extras.get("secure", False)
         # secure = conn.extra_dejson.get("secure", False)  # default False
 
         self.client = Minio(
             endpoint,
-            access_key="placeholderkey",
-            secret_key="placeholderkey",
+            access_key=access_key,
+            secret_key=secret_key,
             secure=False
         )
-
 
     def extract(self) -> list:
         start_index = 0
