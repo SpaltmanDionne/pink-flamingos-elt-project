@@ -7,6 +7,7 @@ requires-python = ">=3.10.13"
 dependencies = [
     "google-auth>=2.43.0",
     "google-cloud-storage>=3.5.0",
+    "datetime>=5.5",
     "minio>=7.2.18",
     "psycopg2-binary>=2.9.11",
     "python-dotenv>=1.2.1",
