@@ -1,0 +1,10 @@
+FROM <base_image>
+
+USER root
+
+# interpretation: change the ownership of the /opt/airflow and /data directories to the airflow user in the airflow group
+RUN mkdir -p <directories> && chown -R airflow: /opt/airflow /data
+
+USER airflow
+
+RUN uv pip install --no-cache-dir <python_dependencies>
