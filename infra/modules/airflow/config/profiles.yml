@@ -1,0 +1,12 @@
+dbt_pink_flamingos:
+  outputs:
+    dev:
+      dbname: pink_flamingo
+      host: pinkflamingos_postgres
+      pass: pinkflamingos
+      port: 5432
+      schema: pink_flamingo
+      threads: 1
+      type: postgres
+      user: pinkflamingos
+  target: dev

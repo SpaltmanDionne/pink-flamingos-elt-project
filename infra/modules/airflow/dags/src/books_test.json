@@ -1,0 +1,704 @@
+[
+  {
+    "kind": "books#volume",
+    "id": "MbbkFOnP7OkC",
+    "etag": "MXLG2I32Ckg",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/MbbkFOnP7OkC",
+    "volumeInfo": {
+      "title": "A Holiday of Love",
+      "authors": [
+        "Jude Deveraux",
+        "Arnette Lamb",
+        "Jill Barnett",
+        "Judith McNaught"
+      ],
+      "publisher": "Simon and Schuster",
+      "publishedDate": "2005-10-25",
+      "description": "In New York City in the late 1800s, a beautiful but clumsy angel turns a lonely man's life around.... In medieval Scotland, the intrigues of a Christmas Mass imperil two Highland lovers....In Regency London, a world-weary lord receives an outrageous proposal....And in modern-day Colorado, a clever twelve-year-old plays matchmaker for his bighearted but impractical mother.",
+      "industryIdentifiers": [
+        {
+          "type": "ISBN_13",
+          "identifier": "9781416517214"
+        },
+        {
+          "type": "ISBN_10",
+          "identifier": "1416517219"
+        }
+      ],
+      "readingModes": {
+        "text": false,
+        "image": false
+      },
+      "pageCount": 386,
+      "printType": "BOOK",
+      "categories": [
+        "Fiction"
+      ],
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": false,
+      "contentVersion": "0.5.3.0.preview.0",
+      "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+      },
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=MbbkFOnP7OkC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=MbbkFOnP7OkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.nl/books?id=MbbkFOnP7OkC&printsec=frontcover&dq=subject:romance&hl=&cd=1&source=gbs_api",
+      "infoLink": "http://books.google.nl/books?id=MbbkFOnP7OkC&dq=subject:romance&hl=&source=gbs_api",
+      "canonicalVolumeLink": "https://books.google.com/books/about/A_Holiday_of_Love.html?hl=&id=MbbkFOnP7OkC"
+    },
+    "saleInfo": {
+      "country": "NL",
+      "saleability": "NOT_FOR_SALE",
+      "isEbook": false
+    },
+    "accessInfo": {
+      "country": "NL",
+      "viewability": "PARTIAL",
+      "embeddable": true,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+      "epub": {
+        "isAvailable": false
+      },
+      "pdf": {
+        "isAvailable": false
+      },
+      "webReaderLink": "http://play.google.com/books/reader?id=MbbkFOnP7OkC&hl=&source=gbs_api",
+      "accessViewStatus": "SAMPLE",
+      "quoteSharingAllowed": false
+    }
+  },
+  {
+    "kind": "books#volume",
+    "id": "03WquAAACAAJ",
+    "etag": "fQfORz/TDCM",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/03WquAAACAAJ",
+    "volumeInfo": {
+      "title": "Jane Eyre",
+      "authors": [
+        "Charlotte Brontë"
+      ],
+      "publishedDate": "2010",
+      "description": "Bronte's infamous Gothic novel tells the story of orphan Jane, a child of unfortunate circumstances. Raised and treated badly by her aunt and cousins and eventually sent away to a cruel boarding school, it is not until Jane becomes a governess at Thornfield that she finds happiness. Meek, measured, but determined, Jane soon falls in love with her brooding and stormy master, Mr Rochester, but it is not long before strange and unnerving events occur in the house and Jane is forced to leave Thornfield to pursue her future.",
+      "industryIdentifiers": [
+        {
+          "type": "ISBN_10",
+          "identifier": "0007866097"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9780007866090"
+        }
+      ],
+      "readingModes": {
+        "text": false,
+        "image": false
+      },
+      "pageCount": 462,
+      "printType": "BOOK",
+      "categories": [
+        "Romance"
+      ],
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": false,
+      "contentVersion": "preview-1.0.0",
+      "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+      },
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=03WquAAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=03WquAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.nl/books?id=03WquAAACAAJ&dq=subject:romance&hl=&cd=2&source=gbs_api",
+      "infoLink": "http://books.google.nl/books?id=03WquAAACAAJ&dq=subject:romance&hl=&source=gbs_api",
+      "canonicalVolumeLink": "https://books.google.com/books/about/Jane_Eyre.html?hl=&id=03WquAAACAAJ"
+    },
+    "saleInfo": {
+      "country": "NL",
+      "saleability": "NOT_FOR_SALE",
+      "isEbook": false
+    },
+    "accessInfo": {
+      "country": "NL",
+      "viewability": "NO_PAGES",
+      "embeddable": false,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED",
+      "epub": {
+        "isAvailable": false
+      },
+      "pdf": {
+        "isAvailable": false
+      },
+      "webReaderLink": "http://play.google.com/books/reader?id=03WquAAACAAJ&hl=&source=gbs_api",
+      "accessViewStatus": "NONE",
+      "quoteSharingAllowed": false
+    }
+  },
+  {
+    "kind": "books#volume",
+    "id": "FTDuAAAAMAAJ",
+    "etag": "7lHHmWHqz2k",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/FTDuAAAAMAAJ",
+    "volumeInfo": {
+      "title": "Sons and Lovers",
+      "subtitle": "Text, Background, and Criticism",
+      "authors": [
+        "David Herbert Lawrence"
+      ],
+      "publisher": "Penguin Group",
+      "publishedDate": "1977",
+      "description": "A provocative portrait of an artist torn between love for his possessive mother and desire for two young beautiful women. It is also the story of Paul Morel's growing into manhood torn by both inner and outer conflict.",
+      "industryIdentifiers": [
+        {
+          "type": "OTHER",
+          "identifier": "UOM:39015009390546"
+        }
+      ],
+      "readingModes": {
+        "text": false,
+        "image": false
+      },
+      "pageCount": 650,
+      "printType": "BOOK",
+      "categories": [
+        "Fiction"
+      ],
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": false,
+      "contentVersion": "1.8.1.0.preview.0",
+      "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+      },
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=FTDuAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=FTDuAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.nl/books?id=FTDuAAAAMAAJ&dq=subject:romance&hl=&cd=3&source=gbs_api",
+      "infoLink": "http://books.google.nl/books?id=FTDuAAAAMAAJ&dq=subject:romance&hl=&source=gbs_api",
+      "canonicalVolumeLink": "https://books.google.com/books/about/Sons_and_Lovers.html?hl=&id=FTDuAAAAMAAJ"
+    },
+    "saleInfo": {
+      "country": "NL",
+      "saleability": "NOT_FOR_SALE",
+      "isEbook": false
+    },
+    "accessInfo": {
+      "country": "NL",
+      "viewability": "NO_PAGES",
+      "embeddable": false,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED",
+      "epub": {
+        "isAvailable": false
+      },
+      "pdf": {
+        "isAvailable": false
+      },
+      "webReaderLink": "http://play.google.com/books/reader?id=FTDuAAAAMAAJ&hl=&source=gbs_api",
+      "accessViewStatus": "NONE",
+      "quoteSharingAllowed": false
+    }
+  },
+  {
+    "kind": "books#volume",
+    "id": "U3PytoGF7H0C",
+    "etag": "BnmMdGHY4nk",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/U3PytoGF7H0C",
+    "volumeInfo": {
+      "title": "Marriage Most Scandalous",
+      "authors": [
+        "Johanna Lindsey"
+      ],
+      "publisher": "Simon and Schuster",
+      "publishedDate": "2006-05",
+      "description": "Set in Regency-era England, this latest historical romance by a \"New York Times\" bestselling author is the story of a spunky aristocratic lady and a brooding mercenary whose services come at a price.",
+      "industryIdentifiers": [
+        {
+          "type": "ISBN_13",
+          "identifier": "9781416505464"
+        },
+        {
+          "type": "ISBN_10",
+          "identifier": "1416505466"
+        }
+      ],
+      "readingModes": {
+        "text": false,
+        "image": false
+      },
+      "pageCount": 454,
+      "printType": "BOOK",
+      "categories": [
+        "Fiction"
+      ],
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": false,
+      "contentVersion": "0.4.3.0.preview.0",
+      "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+      },
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=U3PytoGF7H0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=U3PytoGF7H0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.nl/books?id=U3PytoGF7H0C&printsec=frontcover&dq=subject:romance&hl=&cd=4&source=gbs_api",
+      "infoLink": "http://books.google.nl/books?id=U3PytoGF7H0C&dq=subject:romance&hl=&source=gbs_api",
+      "canonicalVolumeLink": "https://books.google.com/books/about/Marriage_Most_Scandalous.html?hl=&id=U3PytoGF7H0C"
+    },
+    "saleInfo": {
+      "country": "NL",
+      "saleability": "NOT_FOR_SALE",
+      "isEbook": false
+    },
+    "accessInfo": {
+      "country": "NL",
+      "viewability": "PARTIAL",
+      "embeddable": true,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+      "epub": {
+        "isAvailable": false
+      },
+      "pdf": {
+        "isAvailable": false
+      },
+      "webReaderLink": "http://play.google.com/books/reader?id=U3PytoGF7H0C&hl=&source=gbs_api",
+      "accessViewStatus": "SAMPLE",
+      "quoteSharingAllowed": false
+    }
+  },
+  {
+    "kind": "books#volume",
+    "id": "SxPUCwAAQBAJ",
+    "etag": "tQQnceceD5U",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/SxPUCwAAQBAJ",
+    "volumeInfo": {
+      "title": "Me Before You (Movie Tie-In)",
+      "subtitle": "A Novel",
+      "authors": [
+        "Jojo Moyes"
+      ],
+      "publisher": "Penguin Books",
+      "publishedDate": "2016-04-26",
+      "description": "Taking a job as an assistant to extreme sports enthusiast Will, who is wheelchair bound after a motorcycle accident, Louisa struggles with her employer's acerbic moods and learns of his shocking plans before demonstrating to him that life is still worth living.",
+      "industryIdentifiers": [
+        {
+          "type": "ISBN_13",
+          "identifier": "9780143109464"
+        },
+        {
+          "type": "ISBN_10",
+          "identifier": "0143109464"
+        }
+      ],
+      "readingModes": {
+        "text": false,
+        "image": false
+      },
+      "pageCount": 402,
+      "printType": "BOOK",
+      "categories": [
+        "Fiction"
+      ],
+      "averageRating": 5,
+      "ratingsCount": 1,
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": false,
+      "contentVersion": "0.2.1.0.preview.0",
+      "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+      },
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=SxPUCwAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=SxPUCwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.nl/books?id=SxPUCwAAQBAJ&dq=subject:romance&hl=&cd=5&source=gbs_api",
+      "infoLink": "http://books.google.nl/books?id=SxPUCwAAQBAJ&dq=subject:romance&hl=&source=gbs_api",
+      "canonicalVolumeLink": "https://books.google.com/books/about/Me_Before_You_Movie_Tie_In.html?hl=&id=SxPUCwAAQBAJ"
+    },
+    "saleInfo": {
+      "country": "NL",
+      "saleability": "NOT_FOR_SALE",
+      "isEbook": false
+    },
+    "accessInfo": {
+      "country": "NL",
+      "viewability": "NO_PAGES",
+      "embeddable": false,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED",
+      "epub": {
+        "isAvailable": false
+      },
+      "pdf": {
+        "isAvailable": true
+      },
+      "webReaderLink": "http://play.google.com/books/reader?id=SxPUCwAAQBAJ&hl=&source=gbs_api",
+      "accessViewStatus": "NONE",
+      "quoteSharingAllowed": false
+    }
+  },
+  {
+    "kind": "books#volume",
+    "id": "uycf7ReHlYYC",
+    "etag": "fQPwxdVHADk",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/uycf7ReHlYYC",
+    "volumeInfo": {
+      "title": "Last Voyage of the Valentina",
+      "authors": [
+        "Santa Montefiore"
+      ],
+      "publisher": "Simon and Schuster",
+      "publishedDate": "2006-05-23",
+      "description": "\"Originally published in Great Britain in 2005 by Hodder and Stoughton\"--T.p. verso.",
+      "industryIdentifiers": [
+        {
+          "type": "ISBN_13",
+          "identifier": "9780743299435"
+        },
+        {
+          "type": "ISBN_10",
+          "identifier": "0743299434"
+        }
+      ],
+      "readingModes": {
+        "text": false,
+        "image": false
+      },
+      "pageCount": 417,
+      "printType": "BOOK",
+      "categories": [
+        "Fiction"
+      ],
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": false,
+      "contentVersion": "0.3.3.0.preview.0",
+      "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+      },
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=uycf7ReHlYYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=uycf7ReHlYYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.nl/books?id=uycf7ReHlYYC&printsec=frontcover&dq=subject:romance&hl=&cd=6&source=gbs_api",
+      "infoLink": "http://books.google.nl/books?id=uycf7ReHlYYC&dq=subject:romance&hl=&source=gbs_api",
+      "canonicalVolumeLink": "https://books.google.com/books/about/Last_Voyage_of_the_Valentina.html?hl=&id=uycf7ReHlYYC"
+    },
+    "saleInfo": {
+      "country": "NL",
+      "saleability": "NOT_FOR_SALE",
+      "isEbook": false
+    },
+    "accessInfo": {
+      "country": "NL",
+      "viewability": "PARTIAL",
+      "embeddable": true,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+      "epub": {
+        "isAvailable": false
+      },
+      "pdf": {
+        "isAvailable": false
+      },
+      "webReaderLink": "http://play.google.com/books/reader?id=uycf7ReHlYYC&hl=&source=gbs_api",
+      "accessViewStatus": "SAMPLE",
+      "quoteSharingAllowed": false
+    }
+  },
+  {
+    "kind": "books#volume",
+    "id": "-PVWACFDvmEC",
+    "etag": "UuvU3BCMjnU",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/-PVWACFDvmEC",
+    "volumeInfo": {
+      "title": "Prince Charming",
+      "authors": [
+        "Julie Garwood"
+      ],
+      "publisher": "Simon and Schuster",
+      "publishedDate": "1995-02",
+      "description": "Beautiful Taylor Baker, whose fiance has eloped with her odious cousin and whose greedy uncle has his own plans for her, escapes to Montana with rough-edged American Lucas Ross.",
+      "industryIdentifiers": [
+        {
+          "type": "ISBN_13",
+          "identifier": "9780671870966"
+        },
+        {
+          "type": "ISBN_10",
+          "identifier": "0671870963"
+        }
+      ],
+      "readingModes": {
+        "text": false,
+        "image": false
+      },
+      "pageCount": 564,
+      "printType": "BOOK",
+      "categories": [
+        "Fiction"
+      ],
+      "averageRating": 5,
+      "ratingsCount": 1,
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": false,
+      "contentVersion": "0.5.3.0.preview.0",
+      "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+      },
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=-PVWACFDvmEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=-PVWACFDvmEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.nl/books?id=-PVWACFDvmEC&printsec=frontcover&dq=subject:romance&hl=&cd=7&source=gbs_api",
+      "infoLink": "http://books.google.nl/books?id=-PVWACFDvmEC&dq=subject:romance&hl=&source=gbs_api",
+      "canonicalVolumeLink": "https://books.google.com/books/about/Prince_Charming.html?hl=&id=-PVWACFDvmEC"
+    },
+    "saleInfo": {
+      "country": "NL",
+      "saleability": "NOT_FOR_SALE",
+      "isEbook": false
+    },
+    "accessInfo": {
+      "country": "NL",
+      "viewability": "PARTIAL",
+      "embeddable": true,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+      "epub": {
+        "isAvailable": false
+      },
+      "pdf": {
+        "isAvailable": false
+      },
+      "webReaderLink": "http://play.google.com/books/reader?id=-PVWACFDvmEC&hl=&source=gbs_api",
+      "accessViewStatus": "SAMPLE",
+      "quoteSharingAllowed": false
+    }
+  },
+  {
+    "kind": "books#volume",
+    "id": "9vVlAAAAMAAJ",
+    "etag": "ONO/Una4F/E",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/9vVlAAAAMAAJ",
+    "volumeInfo": {
+      "title": "Toxic Bachelors",
+      "authors": [
+        "Danielle Steel"
+      ],
+      "publisher": "Random House Digital, Inc.",
+      "publishedDate": "2005",
+      "description": "Three daunting bachelors embark on a journey to the Mediterranean where they face women who challenge their deepest relationship phobias, sparking big changes in the once-carefree trio that just might put an end to their carousing days.",
+      "industryIdentifiers": [
+        {
+          "type": "OTHER",
+          "identifier": "UOM:39015062619377"
+        }
+      ],
+      "readingModes": {
+        "text": false,
+        "image": false
+      },
+      "pageCount": 344,
+      "printType": "BOOK",
+      "categories": [
+        "Fiction"
+      ],
+      "averageRating": 5,
+      "ratingsCount": 1,
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": false,
+      "contentVersion": "2.5.1.0.preview.0",
+      "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+      },
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=9vVlAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=9vVlAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.nl/books?id=9vVlAAAAMAAJ&dq=subject:romance&hl=&cd=8&source=gbs_api",
+      "infoLink": "http://books.google.nl/books?id=9vVlAAAAMAAJ&dq=subject:romance&hl=&source=gbs_api",
+      "canonicalVolumeLink": "https://books.google.com/books/about/Toxic_Bachelors.html?hl=&id=9vVlAAAAMAAJ"
+    },
+    "saleInfo": {
+      "country": "NL",
+      "saleability": "NOT_FOR_SALE",
+      "isEbook": false
+    },
+    "accessInfo": {
+      "country": "NL",
+      "viewability": "NO_PAGES",
+      "embeddable": false,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED",
+      "epub": {
+        "isAvailable": false
+      },
+      "pdf": {
+        "isAvailable": false
+      },
+      "webReaderLink": "http://play.google.com/books/reader?id=9vVlAAAAMAAJ&hl=&source=gbs_api",
+      "accessViewStatus": "NONE",
+      "quoteSharingAllowed": false
+    }
+  },
+  {
+    "kind": "books#volume",
+    "id": "DHwmDQAAQBAJ",
+    "etag": "DeJTcwj9Hm0",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/DHwmDQAAQBAJ",
+    "volumeInfo": {
+      "title": "9-Nov",
+      "subtitle": "A Novel",
+      "authors": [
+        "Colleen Hoover"
+      ],
+      "publisher": "Simon and Schuster",
+      "publishedDate": "2016-10-04",
+      "description": "When Fallon and aspiring novelist Ben meet and fall in love the day before Fallon's cross-country move, they vow to meet on the same date every year, until Fallon suspects Ben is fabricating their relationship to create the perfect plot twist.",
+      "industryIdentifiers": [
+        {
+          "type": "ISBN_13",
+          "identifier": "9781501151712"
+        },
+        {
+          "type": "ISBN_10",
+          "identifier": "1501151711"
+        }
+      ],
+      "readingModes": {
+        "text": false,
+        "image": false
+      },
+      "pageCount": 384,
+      "printType": "BOOK",
+      "categories": [
+        "Fiction"
+      ],
+      "averageRating": 4.5,
+      "ratingsCount": 2,
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": false,
+      "contentVersion": "0.2.1.0.preview.0",
+      "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+      },
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=DHwmDQAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=DHwmDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.nl/books?id=DHwmDQAAQBAJ&printsec=frontcover&dq=subject:romance&hl=&cd=9&source=gbs_api",
+      "infoLink": "http://books.google.nl/books?id=DHwmDQAAQBAJ&dq=subject:romance&hl=&source=gbs_api",
+      "canonicalVolumeLink": "https://books.google.com/books/about/9_Nov.html?hl=&id=DHwmDQAAQBAJ"
+    },
+    "saleInfo": {
+      "country": "NL",
+      "saleability": "NOT_FOR_SALE",
+      "isEbook": false
+    },
+    "accessInfo": {
+      "country": "NL",
+      "viewability": "PARTIAL",
+      "embeddable": true,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+      "epub": {
+        "isAvailable": false
+      },
+      "pdf": {
+        "isAvailable": false
+      },
+      "webReaderLink": "http://play.google.com/books/reader?id=DHwmDQAAQBAJ&hl=&source=gbs_api",
+      "accessViewStatus": "SAMPLE",
+      "quoteSharingAllowed": false
+    }
+  },
+  {
+    "kind": "books#volume",
+    "id": "LUVbAAAAMAAJ",
+    "etag": "/2URyUF9WkA",
+    "selfLink": "https://www.googleapis.com/books/v1/volumes/LUVbAAAAMAAJ",
+    "volumeInfo": {
+      "title": "Sunset in St. Tropez",
+      "authors": [
+        "Danielle Steel"
+      ],
+      "publishedDate": "2002",
+      "description": "Taking a vacation together to grieve over the death of one of their group, five friends are dismayed by the ramshackle mansion they find instead of the garden villa they expected, and the unexpected appearance of the new girlfriend of the widowed husband.",
+      "industryIdentifiers": [
+        {
+          "type": "OTHER",
+          "identifier": "UOM:39015055087590"
+        }
+      ],
+      "readingModes": {
+        "text": false,
+        "image": false
+      },
+      "pageCount": 248,
+      "printType": "BOOK",
+      "categories": [
+        "Fiction"
+      ],
+      "averageRating": 4,
+      "ratingsCount": 2,
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": false,
+      "contentVersion": "0.5.3.0.preview.0",
+      "panelizationSummary": {
+        "containsEpubBubbles": false,
+        "containsImageBubbles": false
+      },
+      "imageLinks": {
+        "smallThumbnail": "http://books.google.com/books/content?id=LUVbAAAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+        "thumbnail": "http://books.google.com/books/content?id=LUVbAAAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.nl/books?id=LUVbAAAAMAAJ&dq=subject:romance&hl=&cd=10&source=gbs_api",
+      "infoLink": "http://books.google.nl/books?id=LUVbAAAAMAAJ&dq=subject:romance&hl=&source=gbs_api",
+      "canonicalVolumeLink": "https://books.google.com/books/about/Sunset_in_St_Tropez.html?hl=&id=LUVbAAAAMAAJ"
+    },
+    "saleInfo": {
+      "country": "NL",
+      "saleability": "NOT_FOR_SALE",
+      "isEbook": false
+    },
+    "accessInfo": {
+      "country": "NL",
+      "viewability": "NO_PAGES",
+      "embeddable": false,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED",
+      "epub": {
+        "isAvailable": false
+      },
+      "pdf": {
+        "isAvailable": false
+      },
+      "webReaderLink": "http://play.google.com/books/reader?id=LUVbAAAAMAAJ&hl=&source=gbs_api",
+      "accessViewStatus": "NONE",
+      "quoteSharingAllowed": false
+    }
+  }
+]

@@ -14,9 +14,9 @@ from airflow.sdk import Variable
 # ----------------------------
 
 class ExtractLoad():
-    def __init__(self, read_from_cache=False):
+    def __init__(self, read_from_cache=True):
         self.base_url = "https://www.googleapis.com/books/v1/volumes"
-        self.cache_file = "books_test.json"
+        self.cache_file = "/opt/airflow/dags/src/books_test.json"
         self.load_date = datetime.now().strftime("%Y-%m-%d")
         self.bucket_name = "test-flamingo"
         self.read_from_cache = read_from_cache

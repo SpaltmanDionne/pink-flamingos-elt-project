@@ -49,7 +49,11 @@ x-airflow-common:
   # In order to add custom dependencies or upgrade provider distributions you can use your extended image.
   # Comment the image line, place your Dockerfile in the directory where you placed the docker-compose.yaml
   # and uncomment the "build" line below, Then run `docker-compose build` to build the images.
-  image: ${AIRFLOW_IMAGE_NAME:-apache/airflow:3.1.2}
+  # image: ${AIRFLOW_IMAGE_NAME:-apache/airflow:3.1.2}
+  build:
+      context: ./modules/airflow
+      dockerfile: Dockerfile.airflow
+  image: custom-airflow:latest
   # build: .
   env_file:
     - ${ENV_FILE_PATH:-.env}
@@ -75,11 +79,14 @@ x-airflow-common:
     # The following line can be used to set a custom config file, stored in the local config folder
     AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
   volumes:
-    - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
+    - ${AIRFLOW_PROJ_DIR:-}/dags:/opt/airflow/dags
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
     - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
     - ${AIRFLOW_PROJ_DIR:-.}/src:/opt/airflow/src
+    - ../dbt_pink_flamingos:/opt/airflow/dbt_pink_flamingos 
+    - /Users/dspaltma/.dbt:/opt/airflow
+
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     &airflow-common-depends-on
@@ -115,6 +122,7 @@ services:
 
   postgres:
     image: postgres:16
+    container_name: pinkflamingos_postgres
     environment:
       POSTGRES_USER: airflow
       POSTGRES_PASSWORD: airflow
@@ -318,7 +326,7 @@ services:
       _AIRFLOW_WWW_USER_CREATE: 'true'
       _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-airflow}
       _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflow}
-      _PIP_ADDITIONAL_REQUIREMENTS: ''
+      _PIP_ADDITIONAL_REQUIREMENTS: "dbt-postgres==1.7.*"
     user: "0:0"
 
   airflow-cli:
@@ -361,4 +369,3 @@ services:
 volumes:
   postgres-db-volume:
   minio_data:
-  
