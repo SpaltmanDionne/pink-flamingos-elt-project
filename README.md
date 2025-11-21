@@ -2,7 +2,14 @@
 
 Team members: Arthur, Yossi, Sarah & Dionne 
 
-## Steps
+## Steps to set up airflow 
+- Go to the Airflow folder
+- Run in your command line: `docker compose up --build -d`
+- Minio: http://localhost:9001/ 
+- Airflow: http://localhost:8080/ 
+
+
+## Steps to run docker 
 Command to start up your docker-compose: 
 
 ```bash
