@@ -1,13 +1,11 @@
-from datetime import datetime
-from airflow.operators.python import PythonOperator
-from airflow.hooks.base import BaseHook
-
 import json
 import requests
 from io import BytesIO
-from minio import Minio
 from datetime import datetime
 from airflow.sdk import Variable
+from google.cloud import storage
+from airflow.hooks.base import BaseHook
+from google.oauth2 import service_account
 
 # ----------------------------
 # Python functions for tasks
@@ -16,13 +14,12 @@ from airflow.sdk import Variable
 class ExtractLoad():
     def __init__(self, read_from_cache=False):
         self.base_url = "https://www.googleapis.com/books/v1/volumes"
-        self.cache_file = "books_test.json"
+        self.cache_file = "/opt/airflow/dags/src/books_test.json"
         self.load_date = datetime.now().strftime("%Y-%m-%d")
-        self.bucket_name = "test-flamingo"
+        self.bucket_name = "pink-flamingos-raw-0002-storage-bucket"
         self.read_from_cache = read_from_cache
 
         google_api_key = Variable.get("GoogleAPI")
-
         self.query_params = {
             "q": "subject:romance",
             "orderBy": "relevance",
@@ -30,21 +27,10 @@ class ExtractLoad():
             "key": google_api_key
         }
 
-        conn = BaseHook.get_connection('minio') 
-        extras = conn.extra_dejson
-
-        endpoint = extras.get("endpoint_url", conn.host)
-        access_key = extras.get("aws_access_key_id", conn.login)
-        secret_key = extras.get("aws_secret_access_key", conn.password)
-        # secure = extras.get("secure", False)
-        # secure = conn.extra_dejson.get("secure", False)  # default False
-
-        self.client = Minio(
-            endpoint,
-            access_key=access_key,
-            secret_key=secret_key,
-            secure=False
-        )
+        conn = BaseHook.get_connection('google_key')
+        keyfile_path = conn.extra_dejson.get("key_path")
+        gcp_credentials = service_account.Credentials.from_service_account_file(keyfile_path)
+        self.gc_client = storage.Client(credentials=gcp_credentials)
 
     def extract(self) -> list:
         start_index = 0
@@ -55,7 +41,6 @@ class ExtractLoad():
             self.query_params["startIndex"] = start_index
             res = requests.get(self.base_url, params=self.query_params)
 
-            print(res.status_code)
             if res.status_code != 200:
                 raise Exception
             
@@ -71,21 +56,12 @@ class ExtractLoad():
         return books
     
     def load(self, books: list):
-        if not self.client.bucket_exists(self.bucket_name):
-            self.client.make_bucket(self.bucket_name)
-
         file_name = f"load_date={self.load_date}/daily_parition_books.json"
-        json_bytes = json.dumps(books, ensure_ascii=False, indent=2).encode("utf-8")
-        json_file = BytesIO(json_bytes)
 
-        print("Loading json file to Minio.")
-        self.client.put_object(
-            bucket_name=self.bucket_name,
-            object_name=file_name,
-            data=json_file,
-            length=len(json_bytes),
-            content_type="application/json"
-        )
+        print("Loading json file to Google Cloud Storage.")
+        bucket = self.gc_client.bucket(self.bucket_name)
+        blob = bucket.blob(file_name)
+        blob.upload_from_string(json.dumps(books, default=str))
         print("Data loaded.")
 
     def el(self):

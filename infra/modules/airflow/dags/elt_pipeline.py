@@ -1,16 +1,8 @@
 from airflow import DAG
-from airflow.operators.python import PythonOperator
-from airflow.hooks.base import BaseHook
-
-from datetime import datetime
-
-import os
-import json
-import requests
-from io import BytesIO
-from minio import Minio
 from datetime import datetime
 from src.extract_load import ExtractLoad
+from src.load_to_postgres import LoadToPostgres
+from airflow.operators.python import PythonOperator
 
 
 def hello_world(**kwargs):
@@ -18,8 +10,12 @@ def hello_world(**kwargs):
     return "Hello World geprint"
 
 def run_extract_load(**kwargs):
-    el = ExtractLoad(read_from_cache=False)
+    el = ExtractLoad(read_from_cache=True)
     el.el()
+
+def run_load_to_postgres():
+    lp = LoadToPostgres(read_from_cache=True)
+    lp.execute()
 
 # ----------------------------
 # Define DAG
@@ -43,7 +39,13 @@ with DAG(
         python_callable=run_extract_load
     )
 
+    # Task 3: Load to Postgres
+    load_to_postgres_task = PythonOperator(
+        task_id="load_to_postgres",
+        python_callable=run_load_to_postgres
+    )
+
     # ----------------------------
     # Set task dependencies
     # ----------------------------
-    hello_world >> extract_load_task
+    hello_world >> extract_load_task >> load_to_postgres_task
