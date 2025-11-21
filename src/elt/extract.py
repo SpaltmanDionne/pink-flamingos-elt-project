@@ -1,10 +1,10 @@
 import os
 import json
 import requests
-from io import BytesIO
-from minio import Minio
 from datetime import datetime
 from dotenv import load_dotenv
+from google.cloud import storage
+from google.oauth2 import service_account
 
 load_dotenv()
 
@@ -24,12 +24,9 @@ class ExtractLoad():
             "key": os.getenv("API_KEY")
         }
 
-        self.client = Minio(
-            os.getenv("MINIO_ENDPOINT"),
-            access_key=os.getenv("MINIO_USER"),
-            secret_key=os.getenv("MINIO_PASSWORD"),
-            secure=False
-        )
+        keyfile_path = "/Users/arthurjunfujimoto/Documents/xccelerated/bootcamp/pink-flamingos-elt-project/ae-de-project-2025-9b9ea7fe449d.json"
+        gcp_credentials = service_account.Credentials.from_service_account_file(keyfile_path)
+        self.gc_client = storage.Client(credentials=gcp_credentials)
 
     def extract(self) -> list:
         start_index = 0
@@ -53,23 +50,14 @@ class ExtractLoad():
         
         print(f"Extract finalized. Total {len(books)} books were collected.")
         return books
-    
+
     def load(self, books: list):
-        if not self.client.bucket_exists(self.bucket_name):
-            self.client.make_bucket(self.bucket_name)
-
         file_name = f"load_date={self.load_date}/daily_parition_books.json"
-        json_bytes = json.dumps(books, ensure_ascii=False, indent=2).encode("utf-8")
-        json_file = BytesIO(json_bytes)
 
-        print("Loading json file to Minio.")
-        self.client.put_object(
-            bucket_name=self.bucket_name,
-            object_name=file_name,
-            data=json_file,
-            length=len(json_bytes),
-            content_type="application/json"
-        )
+        print("Loading json file to Google Cloud Storage.")
+        bucket = self.gc_client.bucket(self.bucket_name)
+        blob = bucket.blob(file_name)
+        blob.upload_from_string(json.dumps(books, default=str))
         print("Data loaded.")
 
     def el(self):
