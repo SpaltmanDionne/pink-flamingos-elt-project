@@ -1,6 +1,7 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.hooks.base import BaseHook
+from airflow.operators.bash import BashOperator
 
 from datetime import datetime
 
@@ -18,7 +19,7 @@ def hello_world(**kwargs):
     return "Hello World geprint"
 
 def run_extract_load(**kwargs):
-    el = ExtractLoad(read_from_cache=False)
+    el = ExtractLoad(read_from_cache=True)
     el.el()
 
 # ----------------------------
@@ -43,7 +44,18 @@ with DAG(
         python_callable=run_extract_load
     )
 
+    # Task 3: Transform with dbt 
+    transform = BashOperator(
+    task_id="transform_dbt",
+    bash_command=(
+        "dbt run "
+        "--project-dir /opt/airflow/dbt_pink_flamingos "
+        "--profiles-dir /opt/airflow"
+        )
+    )
+
     # ----------------------------
     # Set task dependencies
     # ----------------------------
-    hello_world >> extract_load_task
+    # hello_world >> extract_load_task 
+    hello_world >> extract_load_task >> transform
