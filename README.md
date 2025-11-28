@@ -98,3 +98,36 @@ uv run ruff check
 - Use `uv run` to execute commands without activating the venv
 - UV is much faster than pip for dependency resolution
 - It uses a global cache to speed up installations across projects
+
+
+### Terraform
+
+Te setup the infrastructure run the following command
+
+```bash
+    cd infra
+    terraform init
+```
+
+This read all the files, and creates a *terraform.tfstate* file that determines the state of the infrastruce.
+Afterwards, you can run the following command to let terraform plan out all the steps it needs to do to
+create the specified architecture.
+
+```bash
+    terraform plan
+```
+
+When you're agree on all the steps terraform will do you can actually apply the steps with the command:
+
+```bash
+    terraform apply
+```
+
+If you're done with the setup and want to delete the infra. Run the following command:
+
+```bash
+    terraform destroy
+```
+
+**Note:** in this process a *terraform.tf.state* is created. This tracks the state of your infrastructe.
+Do not lose this file, save it somewhere. Without it, terraform cannot plan, apply or destroy your infra.
