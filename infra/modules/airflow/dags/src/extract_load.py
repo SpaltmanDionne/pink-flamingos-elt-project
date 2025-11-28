@@ -11,7 +11,8 @@ from google.oauth2 import service_account
 # Python functions for tasks
 # ----------------------------
 
-class ExtractLoad():
+
+class ExtractLoad:
     def __init__(self, read_from_cache=True):
         self.base_url = "https://www.googleapis.com/books/v1/volumes"
         self.cache_file = "/opt/airflow/dags/src/books_test.json"
@@ -20,14 +21,9 @@ class ExtractLoad():
         self.read_from_cache = read_from_cache
 
         google_api_key = Variable.get("GoogleAPI")
-        self.query_params = {
-            "q": "subject:romance",
-            "orderBy": "relevance",
-            "maxResults": 10,
-            "key": google_api_key
-        }
+        self.query_params = {"q": "subject:romance", "orderBy": "relevance", "maxResults": 10, "key": google_api_key}
 
-        conn = BaseHook.get_connection('google_key')
+        conn = BaseHook.get_connection("google_key")
         keyfile_path = conn.extra_dejson.get("key_path")
         gcp_credentials = service_account.Credentials.from_service_account_file(keyfile_path)
         self.gc_client = storage.Client(credentials=gcp_credentials)
@@ -43,7 +39,7 @@ class ExtractLoad():
 
             if res.status_code != 200:
                 raise Exception
-            
+
             json_res = res.json()
             items = json_res.get("items", [])
             if not items:
@@ -51,12 +47,12 @@ class ExtractLoad():
 
             books.extend(items)
             start_index += len(items)
-        
+
         print(f"Extract finalized. Total {len(books)} books were collected.")
         return books
-    
+
     def load(self, books: list):
-        file_name = f"load_date={self.load_date}/daily_parition_books.json"
+        file_name = "books.json"
 
         print("Loading json file to Google Cloud Storage.")
         bucket = self.gc_client.bucket(self.bucket_name)
@@ -81,5 +77,3 @@ class ExtractLoad():
     def read_cache(self) -> list:
         with open(self.cache_file, "r", encoding="utf-8") as f:
             return json.load(f)
-        
-
