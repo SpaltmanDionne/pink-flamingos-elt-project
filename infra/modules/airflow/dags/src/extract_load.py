@@ -12,7 +12,7 @@ from google.oauth2 import service_account
 # ----------------------------
 
 class ExtractLoad():
-    def __init__(self, read_from_cache=False):
+    def __init__(self, read_from_cache=True):
         self.base_url = "https://www.googleapis.com/books/v1/volumes"
         self.cache_file = "/opt/airflow/dags/src/books_test.json"
         self.load_date = datetime.now().strftime("%Y-%m-%d")
