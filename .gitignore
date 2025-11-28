@@ -1,3 +1,4 @@
 infra/modules/airflow/logs/
 infra/modules/airflow/dags/__pycache__/
 infra/modules/airflow/.env
+infra/.env

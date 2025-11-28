@@ -1,0 +1,60 @@
+[0m11:19:22.425817 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109c9be50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b260400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b263d90>]}
+
+
+============================== 11:19:22.427993 | 732f0edf-e850-4086-a70a-d0484e5d9762 ==============================
+[0m11:19:22.427993 [info ] [MainThread]: Running with dbt=1.10.15
+[0m11:19:22.428268 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'log_path': 'logs', 'debug': 'False', 'partial_parse': 'True', 'fail_fast': 'False', 'write_json': 'True', 'invocation_command': 'dbt init', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'use_colors': 'True', 'printer_width': '80', 'no_print': 'None', 'empty': 'None', 'indirect_selection': 'eager', 'profiles_dir': '/Users/dspaltma/.dbt', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'version_check': 'True', 'log_cache_events': 'False', 'warn_error': 'None', 'log_format': 'default', 'introspect': 'True'}
+[0m11:19:30.471979 [debug] [MainThread]: Starter project path: /Users/dspaltma/Desktop/Xccelerated/pink-flamingos-elt-project/.venv/lib/python3.10/site-packages/dbt/include/starter_project
+[0m11:19:30.499405 [info ] [MainThread]: 
+Your new dbt project "test" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m11:19:30.500231 [info ] [MainThread]: Setting up your profile.
+[0m11:19:58.283125 [info ] [MainThread]: Profile test written to /Users/dspaltma/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m11:19:58.285338 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 35.9114, "process_in_blocks": "0", "process_kernel_time": 0.141185, "process_mem_max_rss": "107626496", "process_out_blocks": "0", "process_user_time": 0.55367}
+[0m11:19:58.286411 [debug] [MainThread]: Command `dbt init` succeeded at 11:19:58.286215 after 35.91 seconds
+[0m11:19:58.287225 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109c9be50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b263100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b1cdff0>]}
+[0m11:19:58.288338 [debug] [MainThread]: Flushing usage events
+[0m11:19:59.036897 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:20:57.409233 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c37e20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1092003a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109203dc0>]}
+
+
+============================== 11:20:57.411609 | e298ff5e-7cca-481b-a462-64406e9f1fc5 ==============================
+[0m11:20:57.411609 [info ] [MainThread]: Running with dbt=1.10.15
+[0m11:20:57.411897 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'printer_width': '80', 'invocation_command': 'dbt init', 'introspect': 'True', 'target_path': 'None', 'debug': 'False', 'write_json': 'True', 'cache_selected_only': 'False', 'partial_parse': 'True', 'quiet': 'False', 'log_cache_events': 'False', 'profiles_dir': '/Users/dspaltma/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': 'logs', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'indirect_selection': 'eager', 'empty': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'static_parser': 'True'}
+[0m11:28:02.013711 [debug] [MainThread]: Starter project path: /Users/dspaltma/Desktop/Xccelerated/pink-flamingos-elt-project/.venv/lib/python3.10/site-packages/dbt/include/starter_project
+[0m11:28:02.039127 [info ] [MainThread]: 
+Your new dbt project "dbt_pink_flamingos" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m11:28:02.039897 [info ] [MainThread]: Setting up your profile.
+[0m11:28:57.722211 [info ] [MainThread]: Profile dbt_pink_flamingos written to /Users/dspaltma/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m11:28:57.723513 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 480.36423, "process_in_blocks": "0", "process_kernel_time": 0.129001, "process_mem_max_rss": "104185856", "process_out_blocks": "0", "process_user_time": 0.549121}
+[0m11:28:57.724120 [debug] [MainThread]: Command `dbt init` succeeded at 11:28:57.723975 after 480.36 seconds
+[0m11:28:57.724647 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c37e20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109172080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109171690>]}
+[0m11:28:57.725079 [debug] [MainThread]: Flushing usage events
+[0m11:28:58.362844 [debug] [MainThread]: An error was encountered while trying to flush usage events
