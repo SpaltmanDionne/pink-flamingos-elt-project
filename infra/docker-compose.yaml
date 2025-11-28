@@ -84,8 +84,9 @@ x-airflow-common:
     - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
     - ${AIRFLOW_PROJ_DIR:-.}/src:/opt/airflow/src
-    - ../dbt_pink_flamingos:/opt/airflow/dbt_pink_flamingos 
-    - /Users/dspaltma/.dbt:/opt/airflow
+    - ../dbt_pink_flamingos:/opt/airflow/dbt_pink_flamingos
+    - ../dbt_pink_flamingos/profiles.yml:/opt/airflow/profiles.yml
+    - /Users/dspaltma/.dbt:/root/.dbt
 
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
